@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<form action="display-format1.html">
+<label  for="name">Enter your name:</label>
+<input type="text" id="name" name="name"><br><br>
+<label id="dob" for="dob">Enter your Date of birth</label>
+<input type="date" id="date" name="date"><br><br>
+
+<label for="papa">Father's name:</label>
+<input type="text" id="papa" name="papa"><br><br>
+
+<label  for="p_no">Phone number</label>
+<input type="number" id="number" name="number" pattern="[0-9]{10}"><br><br>
+
+<label  for="mail">Enter your Mail</label>
+<input type="email" id="mail" name="mail"><br><br>
+
+<label  for="hobby">Enter your Hobby</label>
+<input type="text" id="hobby" name="hobby"><br><br>
+
+<label for="lang">Languages Known</label>
+<input type="text" id="lang" name="lang"><br><br>
+
+<label  for="linkdin">Linkdin:</label>
+<input type="url" id="linkdin" name="linkdin"><br><br>
+
+<label  for="github">Github:</label>
+<input type="url" id="github" name="github"><br><br>
+
+<label  for="address">Permanent Address:</label>
+<input type="text" id="address" name="address"><br><br>
+
+<label  for="degree">Degree name:</label>
+<input type="text" id="degree" name="degree"><br><br>
+
+<label  for="clg_n">college name:</label>
+<input type="text" id="college" name="college"><br><br>
+
+<input type="text" id="cpi" name="cpi" placeholder="enter your cpi"><br><br>
+
+<input type="text" id="inter" name="inter" placeholder="enter your 12th class details:" ><br><br>
+
+<input type="text" id="inst_name" name="inst_name" placeholder="enter your institute name:"><br><br>
+
+<input type="text" id="10thclass" name="school" placeholder="ente your school details:"><br><br>
+
+<input type="text" id="scl_name" name="scl_name" placeholder="enter your schools name:"><br><br>
+
+<input type="text" id="skill1" name="skill1" placeholder="enter your programming skill:"><br><br>
+
+<input type="text" id="dbms" name="dbms" placeholder="enter your dbms skill:"><br><br>
+
+<input type="text" id="framework" name="framework" placeholder="enter the additional framework:"><br><br>
+
+<input type="text" id="os" name="os" placeholder="operating system worked with"><br><br>
+
+
+
+
+
+
+<textarea id="project" name="project" rows="4" cols="50" placeholder="enter your project details here">Enter your plaject details here:
+
+</textarea><br><br>
+
+<input type="text" id="ach1" name="ach1" placeholder="ente your ahivement" ><br><br>
+<input type="text" id="cert1" name="cert1" placeholder="enter name of the certificate" ><br><br>
+<input type="url" id="website1" name="website1" placeholder="enter the website from where u completed the course:" ><br><br>
+<input type="text" id="cert2" name="cert2" placeholder="enter name of the certificate" ><br><br>
+<input type="url" id="website2" name="website2" placeholder="enter the website from where u completed the course:" ><br><br>
+<input type="submit" onclick="collect();">
+
+</form>
+</body>
+<script>
+function collect() {
+    var name=document.getElementById("name").value;
+    var dob = document.getElementById("date").value;
+    var papa = document.getElementById("papa").value;
+    var no = document.getElementById("number").value;
+    var mail = document.getElementById("mail").value;
+    var hobby = document.getElementById("hobby").value;
+    var lang = document.getElementById("lang").value;
+    var ld = document.getElementById("linkdin").value;
+    var gh = document.getElementById("github").value;
+    var ad = document.getElementById("address").value;
+    var dg = document.getElementById("degree").value;
+    var clg = document.getElementById("college").value;
+    var cp = document.getElementById("cpi").value;
+    var inter = document.getElementById("inter").value;
+    var ins_name = document.getElementById("inst_name").value;
+    var scl = document.getElementById("10thclass").value;
+    var scl_name = document.getElementById("scl_name").value;
+    var skill1 = document.getElementById("skill1").value;
+    var skill2 = document.getElementById("dbms").value;
+    var skill3 = document.getElementById("framework").value;
+    var skill4= document.getElementById("os").value;
+    var proj = document.getElementById("project").value;
+    var ach1 = document.getElementById("ach1").value;
+    var cer1 = document.getElementById("cert1").value;
+    var url1 = document.getElementById("website1").value;
+    var cer2 = document.getElementById("cert2").value;
+    var url2 = document.getElementById("website2").value;
+    
+
+    // Save data to localStorage
+    localStorage.setItem('name',name);
+    localStorage.setItem('dob', dob);
+    localStorage.setItem('papa', papa);
+    localStorage.setItem('number', no);
+    localStorage.setItem('mail', mail);
+    localStorage.setItem('hobby', hobby);
+    localStorage.setItem('lang', lang);
+    localStorage.setItem('linkdin', ld);
+localStorage.setItem('github', gh);
+localStorage.setItem('address', ad);
+localStorage.setItem('degree', dg);
+localStorage.setItem('college', clg);
+localStorage.setItem('cpi', cp);
+localStorage.setItem('inter', inter);
+localStorage.setItem('inst_name', ins_name);
+localStorage.setItem('10thclass', scl);
+localStorage.setItem('scl_name', scl_name);
+localStorage.setItem('skill1', skill1);
+localStorage.setItem('dbms', skill2);
+localStorage.setItem('framework', skill3);
+localStorage.setItem('os', skill4);
+localStorage.setItem('project', proj);
+localStorage.setItem('ach1', ach1);
+localStorage.setItem('cert1', cer1);
+localStorage.setItem('website1', url1);
+localStorage.setItem('cert2', cer2);
+localStorage.setItem('website2', url2);
+
+}
+</script>
+
+</html>
