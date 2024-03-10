@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display without column</title>
+    <style>
+    h1 {
+        text-align: center;
+        
+    }
+    h2{
+    
+  
+        
+        color: #50C4ED;
+    }
+    hr
+    {
+    color:#50C4ED;
+    }
+   
+    #red:hover~.container
+    {
+     background-color:red;
+    }
+    #blue:hover~.container
+    {
+     background-color:blue;
+    }
+    #green:hover~.container
+    {
+     background-color:green;
+    }
+    .skill{
+    font-weight:bold;
+    font-size:20px;
+    }
+     @media print {
+            /* Hide buttons and other non-essential elements */
+            #buttons, #downloadLink {
+                display: none;
+            }
+        }
+</style>
+
+
+
+</head>
+<body>
+<input type="button" id="red" style="height:20px;width:20px;border-radius:50%;background-color:red;" >
+<input type="button" id="blue" style="height:20px;width:20px;border-radius:50%;background-color:blue">
+<input type="button" id="green" style="height:20px;width:20px;border-radius:50%;background-color:green;" > 
+<a id="downloadLink" href="#" onclick="window.print(); return false;">
+            Print or Download as PDF
+        </a>
+
+    <div id="container">
+        <h1><span id="name2"></span></h1>
+        <h2>Personal details<hr></h2>
+        <p><span class="skill">Date of birth:</span> <span id="dob2"></span></p>
+        <p><span class="skill">Father's Name:</span> <span id="papa2"></span></p>
+        <p><span class="skill">Phone Number:</span> <span id="phone"></span></p>
+        <p><span class="skill">Email address:</span> <a id="mail2" href="#">https://mail.google.com/mail/u/0/#inbox</a></p>
+        <p><span class="skill">Hobby:</span> <span id="hobby2"></span></p>
+        <p><span class="skill">Languages known:</span> <span id="lang2"></span></p>
+        <p><span class="skill">Linkdin:</span> <a   id="link2" href="#">https://www.linkedin.com/home?originalSubdomain=in</a></p>
+        <p><span class="skill">Github:</span> <a id="github2" href="#">https://github.com/</a></p>
+        <p><span class="skill">permanent address:</span> <span id="add2"></span></p>
+ <h2>Educational details<hr></h2>
+  <table border="1">
+  <tr>
+    <th><span class="skill">course name</span></th>
+    <th><span class="skill">Institute name</span></th>
+    
+  </tr>
+  <tr>
+    <td><span id="btech"></span> </td>
+    <td><span id="clg2"></span><span id="cpi2"></span></td>
+  </tr>
+   <tr>
+    <td><span id="12th"></span> </td>
+    <td><span id="inter_scl"></span></td>
+  </tr>
+   <tr>
+    <td><span id="10th"></span> </td>
+    <td><span id="scl2"></span></td>
+  </tr>
+  
+</table>    
+<h2>Skills<hr></h2>
+<ul>
+<li><span class="skill">Programming skills:</span> <span id="prog1"></span></li>
+<li><span class="skill">Database management tools:</span> <span id="dbms2"></span></li>
+<li><span class="skill">Other framework/Tools/Library:</span> <span id="fm2"></span></li>
+<li><span class="skill">Operating systems worked with:</span><span id="os2"></span></li>
+</ul>
+<h2>Projects Undertaken<hr></h2>
+<span id="pro"></span>
+<h2>Achievements and Certification<hr></h2>
+<ul>
+<li><span id="ac1"></span></li>
+<li><span id="ce1"></span></li>
+<li><a id="ur1" href="#">https://www.shecodes.io/</a></li>
+<li><span id="ce2"></span></li>
+<li><a id="ur2" href="#">https://www.mongodb.com/</a></li>
+</ul>
+    
+</div>
+
+</body>
+
+    <script>
+        document.getElementById('name2').innerHTML=localStorage.getItem('name');
+        document.getElementById('dob2').innerText = localStorage.getItem('dob');
+     document.getElementById('dob2').innerText = localStorage.getItem('dob');
+document.getElementById('papa2').innerText = localStorage.getItem('papa');
+document.getElementById('phone').innerText = localStorage.getItem('number');
+document.getElementById('mail2').innerHTML = localStorage.getItem('mail');
+document.getElementById('hobby2').innerText = localStorage.getItem('hobby');
+document.getElementById('lang2').innerText = localStorage.getItem('lang');
+document.getElementById('link2').href= localStorage.getItem('linkdin');
+document.getElementById('github2').href = localStorage.getItem('github');
+document.getElementById('add2').innerText = localStorage.getItem('address');
+document.getElementById('btech').innerText = localStorage.getItem('degree');
+document.getElementById('clg2').innerText = localStorage.getItem('college');
+document.getElementById('cpi2').innerText = localStorage.getItem('cpi');
+document.getElementById('12th').innerText = localStorage.getItem('inter');
+document.getElementById('inter_scl').innerText = localStorage.getItem('inst_name');
+document.getElementById('10th').innerText = localStorage.getItem('10thclass');
+document.getElementById('scl2').innerText = localStorage.getItem('scl_name');
+document.getElementById('prog1').innerText = localStorage.getItem('skill1');
+document.getElementById('dbms2').innerText = localStorage.getItem('dbms');
+document.getElementById('fm2').innerText = localStorage.getItem('framework');
+document.getElementById('os2').innerText = localStorage.getItem('os');
+document.getElementById('pro').innerText = localStorage.getItem('project');
+document.getElementById('ac1').innerText = localStorage.getItem('ach1');
+document.getElementById('ce1').innerText = localStorage.getItem('cert1');
+document.getElementById('ur1').href = localStorage.getItem('website1');
+document.getElementById('ce2').innerText = localStorage.getItem('cert2');
+document.getElementById('ur2').href = localStorage.getItem('website2');
+
+        
+    </script>
+
+</html>
+
