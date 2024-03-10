@@ -1,1 +1,3 @@
-# cv-management
+CV management system: A web-portal, where end user can (re)design curriculum vitae based on available functionalities such as, number of columns, colour of the headlines, and background color as a part of CS-2015 - Web Technology course of 4th Semester in 2024.
+This page is made using html css javascript.
+The method of communication between documents (or web pages) using localStorage is a part of the Web Storage API provided by web browsers. localStorage is a key-value storage mechanism that allows web applications to store data in a persistent manner on the client's side, meaning the data persists even after the browser window is closed.
