@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two column format</title>
+    <style>
+    h1 {
+        text-align: center;
+        
+    }
+    h2{
+    
+  
+        
+        color: #50C4ED;
+    }
+    hr
+    {
+    color:#50C4ED;
+    }
+    .skill{
+    font-weight:bold;
+    font-size:20px;
+    }
+    #container{
+    display:flex;
+    }
+    #box1{
+    height:1200px;
+    width:500px;
+    background-color:#114232;
+    color:white;
+    margin-left:10px;
+    border-radius:4px;
+    }
+    #box2{
+    height:1200px;
+    width:700px;
+    }
+    #tech{
+    color:white;
+    }
+    @media print {
+            /* Hide buttons and other non-essential elements */
+            #buttons, #downloadLink {
+                display: none;
+            }
+        }
+</style>
+
+
+</head>
+<body>
+<input type="button" id="red" style="height:20px;width:20px;border-radius:50%;background-color:red;" >
+<input type="button" id="blue" style="height:20px;width:20px;border-radius:50%;background-color:blue">
+<input type="button" id="green" style="height:20px;width:20px;border-radius:50%;background-color:green;" >
+<a id="downloadLink" href="#" onclick="window.print(); return false;">
+            Print or Download as PDF
+        </a>
+
+    <div id="container">
+    <div id="box1">
+        <h1>Rupali Bharti</h1>
+        <p><span class="skill">Phone Number:</span> <span id="phone"></span></p>
+        <p><span class="skill">Email address:</span> <a id="mail2" href="rupali4bharti@iiitmanipur.ac.in">rupali4bharti@iiitmanipur.ac.in</a></p>
+        <p><span class="skill">Linkdin:</span> <a id="link2" href="https://www.linkedin.com/in/rupali-bharti-13aa78257/">https://www.linkedin.com/in/rupali-bharti-13aa78257/</a></p>
+        <p><span class="skill">Github: </span><a id="github2" href="https://github.com/she-codes3298">https://github.com/she-codes3298</a></p><br><br><br>
+        
+        
+        <p><span class="skill">Date of birth:<span> <span id="dob2"></span></p>
+        <p><span class="skill">Father's Name:</span> <span id="papa2"></span></p>
+        <p><span class="skill">permanent address:</span><span id="add2"></span></p><br><br><br>
+        <h2 id="tech">Technical skills</h2>
+        <ul>
+        <li><span class="skill">Programming skills:</span> <span id="prog1"></span></li>
+        <li><span class="skill">Database management tools:</span> <span id="dbms2"></span></li>
+        <li><span class="skill">Other framework/Tools/Library:</span> <span id="fm2"></span></li>
+        <li><span class="skill">Operating systems worked with:</span><span id="os2"></span></li>
+        </ul><br><br><br>
+        
+        
+        <p><span class="skill">Languages known:</span> <span id="lang2"></span></p>
+        <p><span class="skill">Hobby: </span><span id="hobby2"></span></p>
+        
+ 
+</div>
+<div id="box2"> 
+<h2>Educational details</h2>
+  <table border="1">
+  <tr>
+    <th>course name</th>
+    <th>Institute name</th>
+    
+  </tr>
+  <tr>
+    <td><span id="btech"></span> </td>
+    <td><span id="clg2"></span><span id="cpi2"></span></td>
+  </tr>
+   <tr>
+    <td><span id="12th"></span> </td>
+    <td><span id="inter_scl"></span></td>
+  </tr>
+   <tr>
+    <td><span id="10th"></span> </td>
+    <td><span id="scl2"></span></td>
+  </tr>
+  
+</table>   
+
+<h2>Projects Undertaken</h2>
+<span id="pro"></span>
+<h2>Achievements and Certification</h2>
+<ul>
+<li><span id="ac1"></span></li>
+<li><span id="ce1"></span></li>
+<li><a id="ur1" href="https://www.shecodes.io/certificates/95dd34e8a75dd40056d8b631eeed9ac6">https://www.shecodes.io/certificates/95dd34e8a75dd40056d8b631eeed9ac6</a></li>
+<li><span id="ce2"></span></li>
+<li><a id="ur2" href="https://learn.mongodb.com/c/RVQre6RLSPCp8RzCx-EjFA">https://learn.mongodb.com/c/RVQre6RLSPCp8RzCx-EjFA</a></li>
+</ul>
+</div>
+    
+    </div>
+
+    <script>
+        
+        document.getElementById('dob2').innerText = localStorage.getItem('dob');
+     document.getElementById('dob2').innerText = localStorage.getItem('dob');
+document.getElementById('papa2').innerText = localStorage.getItem('papa');
+document.getElementById('phone').innerText = localStorage.getItem('number');
+document.getElementById('mail2').innerText = localStorage.getItem('mail');
+document.getElementById('hobby2').innerText = localStorage.getItem('hobby');
+document.getElementById('lang2').innerText = localStorage.getItem('lang');
+document.getElementById('link2').innerText = localStorage.getItem('linkdin');
+document.getElementById('github2').innerText = localStorage.getItem('github');
+document.getElementById('add2').innerText = localStorage.getItem('address');
+document.getElementById('btech').innerText = localStorage.getItem('degree');
+document.getElementById('clg2').innerText = localStorage.getItem('college');
+document.getElementById('cpi2').innerText = localStorage.getItem('cpi');
+document.getElementById('12th').innerText = localStorage.getItem('inter');
+document.getElementById('inter_scl').innerText = localStorage.getItem('inst_name');
+document.getElementById('10th').innerText = localStorage.getItem('10thclass');
+document.getElementById('scl2').innerText = localStorage.getItem('scl_name');
+document.getElementById('prog1').innerText = localStorage.getItem('skill1');
+document.getElementById('dbms2').innerText = localStorage.getItem('dbms');
+document.getElementById('fm2').innerText = localStorage.getItem('framework');
+document.getElementById('os2').innerText = localStorage.getItem('os');
+document.getElementById('pro').innerText = localStorage.getItem('project');
+document.getElementById('ac1').innerText = localStorage.getItem('ach1');
+document.getElementById('ce1').innerText = localStorage.getItem('cert1');
+document.getElementById('ur1').innerText = localStorage.getItem('website1');
+document.getElementById('ce2').innerText = localStorage.getItem('cert2');
+document.getElementById('ur2').innerText = localStorage.getItem('website2');
+
+        
+    </script>
+</body>
+</html>
+
